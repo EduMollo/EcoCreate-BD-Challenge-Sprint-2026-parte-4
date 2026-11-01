@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+data/
+evidencias/*.log
+tools/__pycache__/
+entrega/
+
+evidencias/
+*.preview.json
+

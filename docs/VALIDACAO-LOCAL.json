@@ -1,0 +1,33 @@
+{
+  "tipo": "Verificacao local estatica; nao e evidencia de execucao Oracle/MongoDB",
+  "tabelas": 14,
+  "packages": 5,
+  "gatilhos": 2,
+  "carga": {
+    "tb_clinica": 6,
+    "tb_tutor": 8,
+    "tb_pet": 10,
+    "tb_consulta": 34,
+    "CV4_LEITURA_SENSOR": 20
+  },
+  "total_esperado_2026": "15635.00",
+  "atendimentos_realizados_2026": 30,
+  "pdfs": {
+    "2TDSPF_2026_Proj_BD.pdf": {
+      "paginas": 22,
+      "bytes": 33554,
+      "sha256": "1ca483c23378c88ec1eac5401485949a4f9c6d93e08e61a32f442ae6802da239"
+    },
+    "2TDSPF_2026_Modelo_Logico.pdf": {
+      "paginas": 2,
+      "bytes": 3945,
+      "sha256": "cea03614cb62d1f8ac9c9be0873c9ac6c486adcb762648f28dc5da575c272e36"
+    },
+    "2TDSPF_2026_Modelo_Fisico.pdf": {
+      "paginas": 9,
+      "bytes": 13467,
+      "sha256": "e25fdd017bbcba384572bcf95bd829c19a7980a48339ba4431ade6d7c00d4ae0"
+    }
+  },
+  "dataset": "JSON estruturalmente valido: 34 documentos; conferir origem no log Oracle"
+}

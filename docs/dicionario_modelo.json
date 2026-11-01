@@ -1,0 +1,595 @@
+{
+  "TB_PERFIL": [
+    [
+      "id",
+      "NUMBER(19)",
+      "IDENTITY / PK"
+    ],
+    [
+      "descricao",
+      "VARCHAR2(20)",
+      "NOT NULL"
+    ]
+  ],
+  "TB_USUARIO": [
+    [
+      "id",
+      "NUMBER(19)",
+      "IDENTITY / PK"
+    ],
+    [
+      "username",
+      "VARCHAR2(60)",
+      "NOT NULL"
+    ],
+    [
+      "senha",
+      "VARCHAR2(100)",
+      "NOT NULL"
+    ],
+    [
+      "nome_exibicao",
+      "VARCHAR2(100)",
+      "NOT NULL"
+    ],
+    [
+      "ativo",
+      "NUMBER(1)",
+      "NOT NULL"
+    ],
+    [
+      "data_criacao",
+      "DATE",
+      "NOT NULL"
+    ],
+    [
+      "id_tutor",
+      "NUMBER(19)",
+      "Opcional / ver constraints"
+    ]
+  ],
+  "TB_USUARIO_PERFIL": [
+    [
+      "id_usuario",
+      "NUMBER(19)",
+      "NOT NULL"
+    ],
+    [
+      "id_perfil",
+      "NUMBER(19)",
+      "NOT NULL"
+    ]
+  ],
+  "TB_TUTOR": [
+    [
+      "id",
+      "NUMBER(19)",
+      "IDENTITY / PK"
+    ],
+    [
+      "nome",
+      "VARCHAR2(100)",
+      "NOT NULL"
+    ],
+    [
+      "cpf",
+      "VARCHAR2(11)",
+      "NOT NULL"
+    ],
+    [
+      "email",
+      "VARCHAR2(150)",
+      "NOT NULL"
+    ],
+    [
+      "telefone",
+      "VARCHAR2(11)",
+      "NOT NULL"
+    ],
+    [
+      "data_nascimento",
+      "DATE",
+      "NOT NULL"
+    ],
+    [
+      "ativo",
+      "NUMBER(1)",
+      "NOT NULL"
+    ]
+  ],
+  "TB_CLINICA": [
+    [
+      "id",
+      "NUMBER(19)",
+      "IDENTITY / PK"
+    ],
+    [
+      "nome",
+      "VARCHAR2(150)",
+      "NOT NULL"
+    ],
+    [
+      "cnpj",
+      "VARCHAR2(14)",
+      "NOT NULL"
+    ],
+    [
+      "telefone",
+      "VARCHAR2(11)",
+      "NOT NULL"
+    ],
+    [
+      "email",
+      "VARCHAR2(150)",
+      "NOT NULL"
+    ],
+    [
+      "endereco",
+      "VARCHAR2(300)",
+      "NOT NULL"
+    ],
+    [
+      "cidade",
+      "VARCHAR2(100)",
+      "NOT NULL"
+    ],
+    [
+      "estado",
+      "VARCHAR2(2)",
+      "NOT NULL"
+    ],
+    [
+      "ativo",
+      "NUMBER(1)",
+      "NOT NULL"
+    ]
+  ],
+  "TB_PET": [
+    [
+      "id",
+      "NUMBER(19)",
+      "IDENTITY / PK"
+    ],
+    [
+      "nome",
+      "VARCHAR2(80)",
+      "NOT NULL"
+    ],
+    [
+      "especie",
+      "VARCHAR2(20)",
+      "NOT NULL"
+    ],
+    [
+      "raca",
+      "VARCHAR2(80)",
+      "NOT NULL"
+    ],
+    [
+      "data_nascimento",
+      "DATE",
+      "NOT NULL"
+    ],
+    [
+      "peso_kg",
+      "NUMBER(6,2)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "sexo",
+      "VARCHAR2(10)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "castrado",
+      "NUMBER(1)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "microchip",
+      "VARCHAR2(20)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "observacoes",
+      "VARCHAR2(500)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "ativo",
+      "NUMBER(1)",
+      "NOT NULL"
+    ],
+    [
+      "id_tutor",
+      "NUMBER(19)",
+      "NOT NULL"
+    ],
+    [
+      "id_clinica_principal",
+      "NUMBER(19)",
+      "Opcional / ver constraints"
+    ]
+  ],
+  "TB_CONSULTA": [
+    [
+      "id",
+      "NUMBER(19)",
+      "IDENTITY / PK"
+    ],
+    [
+      "data_consulta",
+      "DATE",
+      "NOT NULL"
+    ],
+    [
+      "status",
+      "VARCHAR2(20)",
+      "NOT NULL"
+    ],
+    [
+      "tipo_consulta",
+      "VARCHAR2(30)",
+      "NOT NULL"
+    ],
+    [
+      "veterinario",
+      "VARCHAR2(100)",
+      "NOT NULL"
+    ],
+    [
+      "diagnostico",
+      "VARCHAR2(1000)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "prescricao",
+      "VARCHAR2(1000)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "observacoes",
+      "VARCHAR2(500)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "valor",
+      "NUMBER(10,2)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "data_retorno",
+      "DATE",
+      "Opcional / ver constraints"
+    ],
+    [
+      "criado_em",
+      "TIMESTAMP",
+      "NOT NULL"
+    ],
+    [
+      "id_pet",
+      "NUMBER(19)",
+      "NOT NULL"
+    ],
+    [
+      "id_clinica",
+      "NUMBER(19)",
+      "NOT NULL"
+    ],
+    [
+      "motivo_cancelamento",
+      "VARCHAR2(300)",
+      "Opcional"
+    ],
+    [
+      "id_veterinario",
+      "NUMBER(6)",
+      "FK / NOT NULL"
+    ],
+    [
+      "id_tipo_servico",
+      "NUMBER(6)",
+      "FK / NOT NULL"
+    ]
+  ],
+  "TB_EVENTO_SAUDE": [
+    [
+      "id",
+      "NUMBER(19)",
+      "IDENTITY / PK"
+    ],
+    [
+      "tipo_evento",
+      "VARCHAR2(30)",
+      "NOT NULL"
+    ],
+    [
+      "descricao",
+      "VARCHAR2(500)",
+      "NOT NULL"
+    ],
+    [
+      "data_evento",
+      "DATE",
+      "NOT NULL"
+    ],
+    [
+      "data_proxima_acao",
+      "DATE",
+      "Opcional / ver constraints"
+    ],
+    [
+      "concluido",
+      "NUMBER(1)",
+      "NOT NULL"
+    ],
+    [
+      "criado_em",
+      "TIMESTAMP",
+      "NOT NULL"
+    ],
+    [
+      "id_pet",
+      "NUMBER(19)",
+      "NOT NULL"
+    ],
+    [
+      "id_consulta",
+      "NUMBER(19)",
+      "Opcional / ver constraints"
+    ]
+  ],
+  "TB_VACINA": [
+    [
+      "id",
+      "NUMBER(19)",
+      "IDENTITY / PK"
+    ],
+    [
+      "nome",
+      "VARCHAR2(100)",
+      "NOT NULL"
+    ],
+    [
+      "fabricante",
+      "VARCHAR2(100)",
+      "NOT NULL"
+    ],
+    [
+      "lote",
+      "VARCHAR2(50)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "data_aplicacao",
+      "DATE",
+      "NOT NULL"
+    ],
+    [
+      "data_validade",
+      "DATE",
+      "NOT NULL"
+    ],
+    [
+      "proxima_dose",
+      "DATE",
+      "Opcional / ver constraints"
+    ],
+    [
+      "criado_em",
+      "TIMESTAMP",
+      "NOT NULL"
+    ],
+    [
+      "id_pet",
+      "NUMBER(19)",
+      "NOT NULL"
+    ],
+    [
+      "id_clinica",
+      "NUMBER(19)",
+      "Opcional / ver constraints"
+    ]
+  ],
+  "TB_MEDICAMENTO": [
+    [
+      "id",
+      "NUMBER(19)",
+      "IDENTITY / PK"
+    ],
+    [
+      "nome",
+      "VARCHAR2(100)",
+      "NOT NULL"
+    ],
+    [
+      "principio_ativo",
+      "VARCHAR2(100)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "dosagem",
+      "VARCHAR2(100)",
+      "NOT NULL"
+    ],
+    [
+      "frequencia",
+      "VARCHAR2(100)",
+      "NOT NULL"
+    ],
+    [
+      "data_inicio",
+      "DATE",
+      "NOT NULL"
+    ],
+    [
+      "data_fim",
+      "DATE",
+      "Opcional / ver constraints"
+    ],
+    [
+      "uso_continuo",
+      "NUMBER(1)",
+      "NOT NULL"
+    ],
+    [
+      "observacoes",
+      "VARCHAR2(500)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "id_pet",
+      "NUMBER(19)",
+      "NOT NULL"
+    ],
+    [
+      "id_consulta",
+      "NUMBER(19)",
+      "Opcional / ver constraints"
+    ]
+  ],
+  "CV4_AUD_PET": [
+    [
+      "id_auditoria",
+      "NUMBER",
+      "IDENTITY / PK, PK"
+    ],
+    [
+      "id_registro",
+      "NUMBER(19)",
+      "Opcional / ver constraints"
+    ],
+    [
+      "tipo_operacao",
+      "VARCHAR2(10)",
+      "NOT NULL"
+    ],
+    [
+      "nome_usuario",
+      "VARCHAR2(128)",
+      "NOT NULL"
+    ],
+    [
+      "data_hora",
+      "TIMESTAMP",
+      "NOT NULL"
+    ],
+    [
+      "valor_anterior",
+      "CLOB",
+      "Opcional / ver constraints"
+    ],
+    [
+      "valor_novo",
+      "CLOB",
+      "Opcional / ver constraints"
+    ],
+    [
+      "nome_tabela",
+      "VARCHAR2(30)",
+      "NOT NULL / default TB_PET"
+    ],
+    [
+      "usuario_so",
+      "VARCHAR2(100)",
+      "Opcional"
+    ],
+    [
+      "maquina",
+      "VARCHAR2(100)",
+      "Opcional"
+    ],
+    [
+      "usuario_aplicacao",
+      "VARCHAR2(100)",
+      "Opcional"
+    ]
+  ],
+  "CV4_VETERINARIO": [
+    [
+      "id_veterinario",
+      "NUMBER(6)",
+      "PK"
+    ],
+    [
+      "nome",
+      "VARCHAR2(100)",
+      "NOT NULL"
+    ],
+    [
+      "crmv",
+      "VARCHAR2(20)",
+      "NOT NULL"
+    ],
+    [
+      "especialidade",
+      "VARCHAR2(60)",
+      "Opcional / ver constraints"
+    ]
+  ],
+  "CV4_TIPO_SERVICO": [
+    [
+      "id_tipo_servico",
+      "NUMBER(6)",
+      "PK"
+    ],
+    [
+      "descricao",
+      "VARCHAR2(60)",
+      "NOT NULL"
+    ],
+    [
+      "preco_base",
+      "NUMBER(10,2)",
+      "NOT NULL"
+    ],
+    [
+      "codigo_app",
+      "VARCHAR2(30)",
+      "NOT NULL"
+    ]
+  ],
+  "CV4_LEITURA_SENSOR": [
+    [
+      "id_leitura",
+      "NUMBER(10)",
+      "PK"
+    ],
+    [
+      "id_pet",
+      "NUMBER(19)",
+      "NOT NULL, FK"
+    ],
+    [
+      "dispositivo",
+      "VARCHAR2(30)",
+      "NOT NULL"
+    ],
+    [
+      "data_hora",
+      "TIMESTAMP",
+      "NOT NULL"
+    ],
+    [
+      "temperatura",
+      "NUMBER(4,1)",
+      "NOT NULL"
+    ],
+    [
+      "freq_cardiaca",
+      "NUMBER(4)",
+      "NOT NULL"
+    ],
+    [
+      "spo2",
+      "NUMBER(5,1)",
+      "NOT NULL"
+    ],
+    [
+      "atividade",
+      "NUMBER(5,1)",
+      "NOT NULL"
+    ]
+  ]
+}

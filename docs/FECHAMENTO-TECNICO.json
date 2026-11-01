@@ -1,0 +1,160 @@
+{
+  "fechado_em": "2026-11-01T18:31:37.451295-03:00",
+  "backend_repositorio": "https://github.com/EduMollo/Projeto-EcoCreate-Java-Challenge-Sprint-2026-parte-4",
+  "backend_commit": "18c09a298dd7de57520f42d636efd578a8e2f509",
+  "oracle_mongodb_execucao_real": {
+    "validado_em": "2026-11-01T16:19:00.4423995-03:00",
+    "objetos_oracle_valid": 12,
+    "documentos_importados_na_execucao": 34,
+    "reimportacao_sem_duplicatas": true,
+    "evidencia": "docs/2TDSPF_2026_Validacao.json"
+  },
+  "dataset_atual": {
+    "arquivo": "2TDSPF_2026_Atendimentos.json",
+    "documentos": 34,
+    "sha256": "1c5e23089fe23ae726af5c594beb4bad5899a033475fcc098fb17f25430bc04c",
+    "mesmo_arquivo_da_execucao_registrada": true
+  },
+  "java": {
+    "verificado_em": "2026-11-01T18:29:41.350785-03:00",
+    "ambiente": "Java 21; H2 isolado; Chromium Playwright 1.56.1",
+    "junit": {
+      "tests": 47,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 4,
+      "executados": 43,
+      "suites": [
+        {
+          "suite": "br.com.fiap.clyvovet.config.RecursosVercelIntegracaoTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.config.SegurancaIntegracaoTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.config.SessaoVercelConfigTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.controller.CadastroControllerIntegracaoTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.controller.OracleClinicoControllerIntegracaoTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.controller.RelatorioControllerIntegracaoTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.demo.CargaDemonstracaoIntegracaoTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.model.ConsultaTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.security.SessaoSerializacaoTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.service.ConsultaServiceIntegracaoTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.service.OracleClinicoServiceTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.service.OracleIntegracaoTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 2
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.service.PostgresIntegracaoTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 2
+        },
+        {
+          "suite": "br.com.fiap.clyvovet.service.risco.AvaliadorDeRiscoTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ]
+    },
+    "playwright": {
+      "testes": 6,
+      "aprovados": 6,
+      "falhas": 0,
+      "duracao_segundos": 12.795712,
+      "casos": [
+        "QA01 - tutor autenticado consulta seus pets",
+        "QA02 - senha incorreta impede autenticacao",
+        "QA03 - alterar ID nao permite acesso ao pet de outro tutor",
+        "QA04 - agendar, iniciar e concluir atendimento",
+        "QA05 - tema escuro persiste entre paginas e recarregamento",
+        "QA06 - tutor nao acessa relatorios administrativos"
+      ]
+    },
+    "jar": {
+      "arquivo": "clyvovet-web-4.0.0.jar",
+      "sha256": "83ba77570aeea210d921108d03b744d271d5b5eca554691cb1b1031db5543039"
+    },
+    "limites": [
+      "H2 e contratos de tela/JDBC nao comprovam execucao real de PL/SQL.",
+      "Os quatro testes opcionais de bancos externos nao foram ativados nesta suite.",
+      "Oracle FIAP e MongoDB reais foram validados em 01/11/2026; evidencia na entrega Database.",
+      "Video narrado e apresentacao da equipe permanecem a cargo dos integrantes."
+    ]
+  },
+  "video": "gravacao_e_link_pendentes",
+  "limites": [
+    "Nova conexao Oracle pelo agente foi bloqueada pela permissao de rede; preservada a evidencia real anterior.",
+    "Os testes MVC da tela Oracle usam contrato substituido e nao sao evidencia de PL/SQL.",
+    "A demonstracao Oracle pela interface e a narracao serao gravadas pela equipe.",
+    "Se o dataset mudar durante o video, conferir a nova importacao MongoDB e seus resultados."
+  ]
+}

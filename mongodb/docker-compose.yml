@@ -1,0 +1,19 @@
+name: clyvovet-database-sprint4
+services:
+  mongodb:
+    image: mongodb/mongodb-community-server:8.0-ubi8
+    container_name: clyvovet-mongo-sprint4
+    ports:
+      - "127.0.0.1:27017:27017"
+    volumes:
+      - clyvovet_mongodb:/data/db
+      - ../dataset:/dataset:ro
+      - ./:/scripts:ro
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand({ping:1}).ok"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+volumes:
+  clyvovet_mongodb:

@@ -1,0 +1,117 @@
+{
+  "validado_em": "2026-11-01T16:19:00.4423995-03:00",
+  "origem": "Roteiro real no terminal Windows, resultado-validacao.json e relatorios Surefire",
+  "oracle": {
+    "status": "aprovado",
+    "versao": "19.3",
+    "objetos_finais_valid": 12,
+    "testes_transacionais": "aprovados com rollback",
+    "procedures_via_backend": "exportacao JSON e faturamento executados por OracleIntegracaoTest"
+  },
+  "dataset": {
+    "arquivo": "2TDSPF_2026_Atendimentos.json",
+    "sha256": "1c5e23089fe23ae726af5c594beb4bad5899a033475fcc098fb17f25430bc04c",
+    "documentos": 34,
+    "realizados_2026": 30,
+    "faturamento_2026": "15635"
+  },
+  "mongodb": {
+    "status": "aprovado",
+    "colecao": "clyvovet_sprint4.atendimentos",
+    "documentos_conferidos": 34,
+    "reimportacao_sem_duplicatas": true
+  },
+  "java": {
+    "status": "aprovado",
+    "identificados": 40,
+    "executados": 38,
+    "falhas": 0,
+    "erros": 0,
+    "ignorados": 2,
+    "jar": "clyvovet-web-4.0.0.jar",
+    "sha256_jar": "e0cdf7167665a4f8a18fcac82c09b605ac802bf32dd9d1de380ee2dc26206731",
+    "suites": [
+      {
+        "suite": "br.com.fiap.clyvovet.config.SegurancaIntegracaoTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "br.com.fiap.clyvovet.controller.CadastroControllerIntegracaoTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "br.com.fiap.clyvovet.controller.RelatorioControllerIntegracaoTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "br.com.fiap.clyvovet.demo.CargaDemonstracaoIntegracaoTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "br.com.fiap.clyvovet.model.ConsultaTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "br.com.fiap.clyvovet.security.SessaoSerializacaoTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "br.com.fiap.clyvovet.service.ConsultaServiceIntegracaoTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "br.com.fiap.clyvovet.service.OracleClinicoServiceTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "br.com.fiap.clyvovet.service.OracleIntegracaoTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "br.com.fiap.clyvovet.service.PostgresIntegracaoTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2
+      },
+      {
+        "suite": "br.com.fiap.clyvovet.service.risco.AvaliadorDeRiscoTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ]
+  },
+  "pendencias": [
+    "Conferir jornada pela interface Oracle: cadastro, atendimento e leitura",
+    "Gravar video narrado, conferir acesso e incluir o link na entrega"
+  ]
+}
