@@ -2,8 +2,6 @@
 -- Carlos Alberto Guedes Neto RM 566022; Eduardo Novaes Mollo RM 561515;
 -- Luan Peixoto Marins Rocha RM 562258; Mathaus Victor Souza Marcelino RM 564146;
 -- Vinicius Luis Exposito Morassi RM 563340.
--- INSTALACAO MANUAL EM SCHEMA SEM OS OBJETOS CLYVOVET. NAO EXECUTAR SOBRE SPRINT 3.
--- Alternativa ao Flyway. Nao misturar os dois instaladores no mesmo schema.
 SET DEFINE OFF
 SET SERVEROUTPUT ON SIZE UNLIMITED
 WHENEVER SQLERROR EXIT SQL.SQLCODE ROLLBACK
