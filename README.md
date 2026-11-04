@@ -10,7 +10,7 @@ Continuação da Sprint 3, avaliada com **100/100**, com feedback “parabéns�
 | Mathaus Victor Souza Marcelino | 564146 |
 | Vinicius Luis Exposito Morassi | 563340 |
 
-**🎬 Vídeo demonstrativo** · [](https://www.youtube.com/watch?v=e19eRJnnAcA)
+[**🎬 Vídeo demonstrativo**](https://www.youtube.com/watch?v=e19eRJnnAcA)
 
 ## Primeiro acesso
 
