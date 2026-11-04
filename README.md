@@ -1,7 +1,5 @@
 # ClyvoVet — Database Sprint 4
 
-Continuação da Sprint 3, avaliada com **100/100**, com feedback “parabéns”. Entrega em **04/11/2026**. Turma **2TDSPF**.
-
 | Integrante | RM |
 |---|---|
 | Carlos Alberto Guedes Neto | 566022 |
@@ -10,7 +8,7 @@ Continuação da Sprint 3, avaliada com **100/100**, com feedback “parabéns�
 | Mathaus Victor Souza Marcelino | 564146 |
 | Vinicius Luis Exposito Morassi | 563340 |
 
-[**🎬 Vídeo demonstrativo**](https://www.youtube.com/watch?v=e19eRJnnAcA)
+[**Vídeo**](https://www.youtube.com/watch?v=e19eRJnnAcA)
 
 ## Primeiro acesso
 
