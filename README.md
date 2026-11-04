@@ -10,33 +10,6 @@ Continuação da Sprint 3, avaliada com **100/100**, com feedback “parabéns�
 | Mathaus Victor Souza Marcelino | 564146 |
 | Vinicius Luis Exposito Morassi | 563340 |
 
-## Entregáveis
-
-| Item | Arquivo |
-|---|---|
-| Documento principal | `docs/2TDSPF_2026_Proj_BD.pdf` |
-| Modelo lógico | `docs/2TDSPF_2026_Modelo_Logico.pdf` |
-| Modelo físico com dicionário completo | `docs/2TDSPF_2026_Modelo_Fisico.pdf` |
-| Instalação SQL integrada | `sql/2TDSPF_2026_CodigoSql_Integrantes.sql` |
-| Packages e gatilhos | `sql/07_packages_gatilhos.sql` |
-| Carga fictícia e testes | `sql/09_dados_demonstracao.sql`, `10_verificar_objetos.sql`, `11_testes_transacionais.sql` |
-| Dataset real | `dataset/2TDSPF_2026_Atendimentos.json`, exportado do Oracle FIAP: 34 documentos |
-| MongoDB | `mongodb/01_criar_estrutura.js`, `02_importar_validar.js`, `03_consultas.js` |
-| Vídeo narrado | Gravação pendente; link em `docs/VIDEO.md`, roteiro em `docs/ROTEIRO-VIDEO.md` |
-
-**Validação técnica concluída em 01/11/2026:** Oracle com 12 objetos finais VALID; JSON real de 34 atendimentos; importação e reimportação MongoDB sem duplicatas; build Java completo com 38 testes executados, zero falhas e dois testes opcionais PostgreSQL ignorados. Os testes Oracle foram executados. Resumo verificável em `docs/2TDSPF_2026_Validacao.json`.
-
-O pacote técnico está em `entrega/2TDSPF_2026_ClyvoVet_Database_Sprint4.zip`. A gravação narrada e a demonstração pelas telas Oracle serão feitas pela equipe. Preencher `docs/VIDEO.md` antes da submissão. Conferir `docs/VALIDACAO.md` e `docs/FECHAMENTO-TECNICO.json`. O backend completo está no GitHub; instruções em `docs/BACKEND-JAVA.md`.
-
-## Decisões
-
-1. O Oracle da FIAP é a origem da avaliação. A versão publicada em PostgreSQL não demonstra PL/SQL.
-2. As entidades aprovadas são preservadas e evoluídas para o modelo do Java. O JPA usa tabelas `TB_*`; os packages usam views `CV4_*` sobre **as mesmas linhas**. Veterinários, serviços e sensores são entidades próprias com FKs reais.
-3. Os prefixos CV4 também alcançam constraints e índices para permitir coexistência com a Sprint 3 no mesmo usuário. Não há DROP no instalador.
-4. Mantida a conversão manual JSON e a acumulação manual do faturamento. O retorno agora usa OUT CLOB; erros são propagados com códigos Oracle.
-5. Triggers ficam como objetos próprios, delegando a lógica aos packages. Auditoria acompanha a mesma transação da alteração.
-6. MongoDB recebe documentos por atendimento, com entidades relacionadas aninhadas. O importador compara campos e contagens e faz upsert sem duplicar IDs. Oracle continua como fonte dos dados.
-
 ## Primeiro acesso
 
 No PowerShell, dentro desta pasta:
@@ -113,17 +86,3 @@ Banco: `clyvovet_sprint4`, coleção: `atendimentos`. Imagem oficial `mongodb/mo
 
 O código cria a coleção e seus validadores/índices antes de importar. Usa `mongosh` e lê diretamente o JSON exportado; não depende de `mongoimport`. Acrescenta `data_bson` e `valor_decimal`, preservando todos os campos originais. Reimportação atualiza os IDs contidos no arquivo, sem excluir documentos ausentes.
 
-## Documentação e pacote final
-
-As fontes HTML, SVG e geradores Python sem dependências ficam disponíveis para revisão. Para regenerar os PDFs:
-
-```powershell
-python tools/gerar_documentacao.py
-python tools/renderizar_pdf.py
-```
-
-O diretório `historico` preserva o SQL e PDF da entrega aprovada. Ele não é executado na instalação nova.
-
-O vídeo deve ter narração. A execução real Oracle/MongoDB e o JSON exportado já estão registrados; mostrar esses processos pela aplicação durante a gravação. Não considerar o roteiro como vídeo entregue.
-
-Depois de publicar o vídeo, executar `py tools/empacotar_entrega.py --video-url "LINK_HTTPS_DO_VIDEO"`. O comando atualiza o link e recria o pacote. A gravação deve usar Oracle FIAP; o deploy PostgreSQL não executa PL/SQL.
