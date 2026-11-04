@@ -23,15 +23,6 @@
 --    [9] AUDITORIA    - TRG_AUD_PET              AFTER INSERT OR UPDATE OR DELETE ON PET (usa a Funcao 1)
 --   [10] ROTEIRO DE TESTES - execucoes normais, excecoes tratadas e conferencia da auditoria
 --
---  REGRAS RESPEITADAS:
---    * Nenhuma funcao built-in de JSON (JSON_OBJECT, JSON_ARRAY, JSON_VALUE, JSON_QUERY,
---      JSON_TABLE, TO_JSON, JSON_SERIALIZE, APEX_JSON, DBMS_JSON...). Toda conversao e manual.
---    * Nenhum ROLLUP / CUBE / GROUPING SETS / GROUPING. Nas rotinas exigidas tambem nao ha
---      SUM / AVG / GROUP BY: todo somatorio e feito com acumuladores dentro do PL/SQL.
---    * Cada funcao/procedure trata no minimo 3 excecoes distintas + WHEN OTHERS, e o roteiro
---      de testes provoca cada uma delas para gerar os prints da documentacao.
---    * Literais de texto sem acentos, para o script rodar identico em qualquer charset de
---      banco/cliente. Os comentarios estao em portugues normal.
 -- =====================================================================================
 
 
